@@ -1,6 +1,7 @@
 // src/pages/Login.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const Login = () => {
     // State hooks for form fields
@@ -16,8 +17,22 @@ const Login = () => {
             ...formData,
             [name]: value,
         });
+        
     };
+ 
 
+    const handleLogin = async () => {
+        try {
+            const response = await axios.post('http://localhost:8000/api/login', formData);
+            console.log('Login successful:', response.data);
+            alert('Login successful');
+            
+            // You can handle successful login here, e.g., redirecting the user or storing tokens
+        } catch (error) {
+            console.error('Login failed:', error);
+            // Handle login failure, e.g., showing an error message to the user
+        }
+    };
     // Handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -52,7 +67,7 @@ const Login = () => {
                         required
                     />
                 </div>
-                <button type="submit">Login</button>
+                <button onClick={handleLogin}>Login</button>
             </form>
             <p>
                 Don't have an account? <Link to="/register">Register here</Link>
