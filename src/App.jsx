@@ -11,7 +11,7 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Welcome/>} />
-        {/* You can add other routes for home or welcome page here */}
+
       </Routes>
     </Router>
   );

@@ -1,16 +1,16 @@
-// src/pages/Login.jsx
+
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const Login = () => {
-    // State hooks for form fields
+    const navigate= useNavigate()
     const [formData, setFormData] = useState({
         email: '',
         password: '',
     });
 
-    // Handle input changes
+   
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -25,20 +25,23 @@ const Login = () => {
         try {
             const response = await axios.post('http://localhost:8000/api/login', formData);
             console.log('Login successful:', response.data);
-            alert('Login successful');
-            
-            // You can handle successful login here, e.g., redirecting the user or storing tokens
+           // alert('Login successful');
+            if(response.status==201){
+                localStorage.setItem("token",response.data.token)
+                navigate('/')
+            }
+          
         } catch (error) {
             console.error('Login failed:', error);
-            // Handle login failure, e.g., showing an error message to the user
+           
         }
     };
-    // Handle form submission
+   
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Login attempt:', formData);
 
-        // You can add logic to authenticate the user here
+        
     };
 
     return (
