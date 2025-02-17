@@ -1,0 +1,107 @@
+.blood-stock-container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1.5px solid #060505;
+    padding: 6px;
+    border-radius: 8px;
+    width: 98%;
+}
+
+.search-icon {
+    color: #110505;
+}
+
+.search-bar {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 8px;
+}
+
+.new-entry-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #5979e1;
+    color: rgb(252, 252, 252);
+    border: none;
+    cursor: pointer;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.form-container input {
+    margin: 20px;
+    padding: 20px;
+    width: 80%;
+}
+.input{
+    width:85%;
+    
+    padding:20px;
+    border-radius: 8px;
+}
+.save-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.table-container {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table-container th, .table-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.edit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
