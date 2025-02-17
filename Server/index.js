@@ -5,6 +5,7 @@ import cookieParser from 'cookie-parser';
 
 import AuthRouter from './Routes/AuthRouter.js';
 import DonorRouter from './Routes/DonorRouter.js';
+import bloodStockRoutes from "./Routes/bloodStockRoutes.js";
 
 
 const app = express();
@@ -14,6 +15,7 @@ app.use(cookieParser());
 
 app.use('/api', AuthRouter);
 app.use('/api/donors', DonorRouter);
+app.use("/bloodstock", bloodStockRoutes);
 
 
 app.listen(8000, () => {
