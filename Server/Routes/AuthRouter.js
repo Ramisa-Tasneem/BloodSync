@@ -1,9 +1,10 @@
 import express from "express";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import db from "../database.js";
+import db from "../database.js"; 
 
 const router = express.Router();
+
 
 router.post("/signup", async (req, res) => {
     const { name, email, password } = req.body;
@@ -46,11 +47,11 @@ router.post("/login", (req, res) => {
 
         const user = result[0];
 
-
         const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) {
             return res.status(401).json({ error: "Invalid credentials" });
         }
+
 
 
         const token = jwt.sign({ email: user.email }, "your_secret_key", { expiresIn: "1h" });

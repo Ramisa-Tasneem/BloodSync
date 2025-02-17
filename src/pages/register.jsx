@@ -1,16 +1,17 @@
-// src/pages/Register.jsx
+
+import axios from 'axios';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
-    // State hooks for form fields
+   
     const [formData, setFormData] = useState({
-        username: '',
+        name: '',
         email: '',
         password: '',
     });
-
-    // Handle input changes
+    const navigate= useNavigate();
+    
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -19,12 +20,23 @@ const Register = () => {
         });
     };
 
-    // Handle form submission
-    const handleSubmit = (e) => {
+    
+    const handleSubmit = async(e) => {
         e.preventDefault();
+        try {
+            // console.log(formdata)
+            const response = await axios.post("http://localhost:8000/api/signup", formData);
+            // console.log('Registration response:', response);
+            if(response.status==201){
+                navigate('/login')
+            }
+            
+        } catch (error) {
+            console.log(error)
+        }
         console.log('Registration attempt:', formData);
 
-        // You can add logic to register the user here
+        
     };
 
     return (
@@ -32,12 +44,12 @@ const Register = () => {
             <h2>Register</h2>
             <form onSubmit={handleSubmit}>
                 <div className="input-group">
-                    <label htmlFor="username">Username</label>
+                    <label htmlFor="name">Username</label>
                     <input
                         type="text"
-                        id="username"
-                        name="username"
-                        value={formData.username}
+                        id="name"
+                        name="name"
+                        value={formData.name}
                         onChange={handleChange}
                         required
                     />

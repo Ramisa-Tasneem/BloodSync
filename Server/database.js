@@ -6,6 +6,7 @@ const db = mysql.createConnection({
     password: "mysql123",
     database: "bloodsync",
     port: 3306
+
 });
 
 db.connect((err) => {
