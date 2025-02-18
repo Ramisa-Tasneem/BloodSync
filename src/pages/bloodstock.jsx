@@ -61,7 +61,7 @@ const BloodStock = () => {
                             <td>{row.expireDate}</td>
                             <td>{row.bloodGroup}</td>
                             <td>{row.volume}</td>
-                            <td>
+                            <td className="action-data">
                                 <button className="edit-btn">Edit</button>
                                 <button className="delete-btn">Delete</button>
                             </td>

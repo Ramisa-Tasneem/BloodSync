@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    border: 1.5px solid #060505;
+    border: 1.9px solid #060505;
     padding: 6px;
     border-radius: 8px;
     width: 98%;
@@ -39,6 +39,10 @@
     color: rgb(252, 252, 252);
     border: none;
     cursor: pointer;
+}
+.new-entry-btn:hover{
+    background-color: #5979e1;
+
 }
 
 .form-container {
@@ -81,6 +85,7 @@
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+    border: 1.7px solid #060505;
 }
 
 .table-container th, .table-container td {
@@ -88,20 +93,37 @@
     padding: 8px;
     text-align: center;
 }
+.table-container th {
+    background-color: #586285; /* Choose your preferred color */
+    color: white; /* Text color for contrast */
+    padding: 10px; /* Add some padding for better spacing */
+    text-align: left; /* Align text to the left */
+}
 
-.edit-btn {
-    background-color: #007bff;
+.action-data {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.edit-btn,.delete-btn  {
+    background-color: #5979e1;
     color: white;
     padding: 5px 10px;
-    margin-right: 5px;
+    
+    margin: 5px;
     border: none;
     cursor: pointer;
 }
 
 .delete-btn {
-    background-color: #dc3545;
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
+    background-color: #240877;
+
+}
+.edit-btn:hover{
+    background-color:#5979e1;
+}
+
+.delete-btn:hover{
+    background-color: #240877;
 }
