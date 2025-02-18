@@ -81,6 +81,13 @@ li {
     border-radius: 5px;
     cursor: pointer;
     font-size: 12px;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .logout-btn:hover {
