@@ -29,7 +29,7 @@ const Welcome = () => {
                     <ul>
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/donor">Donor</Link></li>
-                        <li><Link to="/patient">Blood Stock</Link></li>
+                        <li><Link to="/bloodstock">Blood Stock</Link></li>
                         <li><Link to="/donations">Blood Request</Link></li>
 
                     </ul>
