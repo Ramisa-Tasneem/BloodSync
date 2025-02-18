@@ -29,6 +29,7 @@
     outline: none;
     width: 100%;
     padding: 8px;
+    
 }
 
 .new-entry-btn {
@@ -52,39 +53,70 @@
     margin-top: 30px;
 }
 
-.form-container input {
+.form-container input{
     margin: 20px;
     padding: 20px;
-    width: 80%;
+    width: 83%; /* Ensure consistency with the select element */
+    border: 1px solid #ccc; /* Match border */
+    border-radius: 5px; /* Smooth edges */
+    font-size: 16px; /* Match text size */
+    background-color: white; /* Ensure same background */
+    outline: none; /* Remove default outline */
+    appearance: none; /* Remove default input styling */
 }
-.input{
-    width:85%;
-    
-    padding:20px;
-    border-radius: 8px;
+.form-container select {
+    margin: 20px;
+    padding: 20px;
+    width: 86%; /* Ensure consistency with the select element */
+    border: 1px solid #ccc; /* Match border */
+    border-radius: 5px; /* Smooth edges */
+    font-size: 16px; /* Match text size */
+    background-color: white; /* Ensure same background */
+    outline: none; /* Remove default outline */
+    appearance: none; /* Remove default input styling */
 }
-.save-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 8px 15px;
-    margin: 5px;
+
+/* Add some styling to make it more visually appealing */
+.form-container input:focus,
+.form-container select:focus {
+    border-color: #5979e1; /* Highlight color on focus */
+    box-shadow: 0 0 5px rgba(89, 121, 225, 0.5);
+}
+
+.save-btn, .cancel-btn {
+    padding: 15px 20px;
+    margin: 10px;
     border: none;
     cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.save-btn {
+    width: 20%;
+    background-color:#5979e1;
+    color: white;
+    border-radius: 15px;
+}
+.save-btn:hover{
+    background-color:#5979e1;
+    color: white;
 }
 
 .cancel-btn {
-    background-color: #dc3545;
-    color: white;
-    padding: 8px 15px;
-    margin: 5px;
-    border: none;
-    cursor: pointer;
+    width:20%;
+    background-color: #240877;
+    color: rgb(240, 230, 230);
+    border-radius:15px;
+}
+.cancel-btn:hover{
+    background-color: #240877;
 }
 
 .table-container {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
+    margin-top: 20px;
     border: 1.7px solid #060505;
 }
 
@@ -94,7 +126,7 @@
     text-align: center;
 }
 .table-container th {
-    background-color: #586285; /* Choose your preferred color */
+    background-color: #626d99; /* Choose your preferred color */
     color: white; /* Text color for contrast */
     padding: 10px; /* Add some padding for better spacing */
     text-align: left; /* Align text to the left */
