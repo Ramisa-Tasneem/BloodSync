@@ -8,6 +8,7 @@ import BloodStock from './pages/bloodstock';
 
 
 import Welcome from './pages/welcome';
+import NewEntry from './pages/newentry';
 
 
 const App = () => {
@@ -20,7 +21,7 @@ const App = () => {
         <Route path="/" element={<Welcome />} />
         <Route path="/donor" element={<Donor />} />
         <Route path="/bloodstock" element={<BloodStock />} />
-
+        <Route path="/new-entry" element={<NewEntry />} />
 
       </Routes>
     </Router>
