@@ -22,6 +22,7 @@ select * from donor;
 
 CREATE TABLE bloodstock (
     blood_id INT PRIMARY KEY AUTO_INCREMENT,
+    donor VARCHAR(255),
     blood_group VARCHAR(5) NOT NULL,
     volume DECIMAL(5,2) NOT NULL,
     donated_date DATE NOT NULL,
