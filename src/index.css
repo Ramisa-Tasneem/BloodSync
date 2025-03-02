@@ -1,99 +1,149 @@
-/* src/style.css */
-.register-container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* ====== GLOBAL STYLES ====== */
+body {
+  background-color: white !important;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-h2 {
+/* ====== COMMON CONTAINER STYLES FOR LOGIN & REGISTER ====== */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 50px;
+  padding: 20px;
+  background-color: white;
+  flex-direction: row;
+}
+
+/* ====== REGISTER PAGE STYLES ====== */
+.register-image {
+  position: absolute;
+  top: 200px;
+  /* Align image properly */
+  left: 20px;
+  /* Ensure image stays on the left */
+  width: 800px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.register-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ====== LOGIN PAGE STYLES ====== */
+.auth-image {
+  position: absolute;
+  top: 200px;
+  /* Align image properly */
+  left: 20px;
+  /* Ensure image stays on the left */
+  width: 800px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.auth-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ====== FLOATING ANIMATION FOR IMAGES ====== */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ====== COMMON FORM STYLES FOR LOGIN & REGISTER ====== */
+.auth-form {
+  position: absolute;
+  top: 160px;
+  /* Adjust this value to move the form container downwards */
+  right: 180px;
+  width: 400px;
+  height: auto;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.auth-form h2 {
   text-align: center;
   margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  border-bottom: 2px solid #d9243f;
+  display: inline-block;
+  padding-bottom: 5px;
+  width: 100%;
 }
 
-.input-group {
-  margin-bottom: 15px;
-}
-
-label {
+.auth-form label {
   display: block;
-  margin-bottom: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background: #b30f32;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.auth-form button:hover {
+  background: #831717;
+}
+
+.auth-form p {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: black;
+}
+
+.auth-form a {
+  color: #d7394e;
+  text-decoration: none;
   font-weight: bold;
 }
 
-input {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-/* src/style.css */
-.login-container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.input-group {
-  margin-bottom: 15px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-input {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-p {
-  text-align: center;
+.auth-form a:hover {
+  text-decoration: underline;
 }
