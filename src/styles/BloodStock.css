@@ -29,6 +29,7 @@
     outline: none;
     width: 100%;
     padding: 8px;
+
 }
 
 .new-entry-btn {
@@ -39,11 +40,17 @@
     color: rgb(252, 252, 252);
     border: none;
     cursor: pointer;
+
     border-radius: 5px;
 }
 
 .new-entry-btn:hover {
     background-color: #4a6bd4;
+
+}
+.new-entry-btn:hover{
+    background-color: #5979e1;
+
 }
 
 .form-container {
@@ -75,11 +82,46 @@
 .save-btn,
 .cancel-btn {
     padding: 12px 18px;
+
+.form-container input{
+    margin: 20px;
+    padding: 20px;
+    width: 83%; /* Ensure consistency with the select element */
+    border: 1px solid #ccc; /* Match border */
+    border-radius: 5px; /* Smooth edges */
+    font-size: 16px; /* Match text size */
+    background-color: white; /* Ensure same background */
+    outline: none; /* Remove default outline */
+    appearance: none; /* Remove default input styling */
+}
+.form-container select {
+    margin: 20px;
+    padding: 20px;
+    width: 86%; /* Ensure consistency with the select element */
+    border: 1px solid #ccc; /* Match border */
+    border-radius: 5px; /* Smooth edges */
+    font-size: 16px; /* Match text size */
+    background-color: white; /* Ensure same background */
+    outline: none; /* Remove default outline */
+    appearance: none; /* Remove default input styling */
+}
+
+/* Add some styling to make it more visually appealing */
+.form-container input:focus,
+.form-container select:focus {
+    border-color: #5979e1; /* Highlight color on focus */
+    box-shadow: 0 0 5px rgba(89, 121, 225, 0.5);
+}
+
+.save-btn, .cancel-btn {
+    padding: 15px 20px;
+
     margin: 10px;
     border: none;
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
+
     width: 40%;
 }
 
@@ -99,6 +141,29 @@
 
 .cancel-btn:hover {
     background-color: #1d0666;
+
+}
+
+.save-btn {
+    width: 20%;
+    background-color:#5979e1;
+    color: white;
+    border-radius: 15px;
+}
+.save-btn:hover{
+    background-color:#5979e1;
+    color: white;
+}
+
+.cancel-btn {
+    width:20%;
+    background-color: #240877;
+    color: rgb(240, 230, 230);
+    border-radius:15px;
+}
+.cancel-btn:hover{
+    background-color: #240877;
+
 }
 
 .table-container {
@@ -107,6 +172,7 @@
     margin-top: 20px;
     border: 1.7px solid #060505;
 }
+
 
 .table-container th,
 .table-container td {
@@ -119,6 +185,18 @@
     background-color: #626d99;
     color: white;
     text-align: left;
+
+.table-container th, .table-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+.table-container th {
+    background-color: #626d99; /* Choose your preferred color */
+    color: white; /* Text color for contrast */
+    padding: 10px; /* Add some padding for better spacing */
+    text-align: left; /* Align text to the left */
+
 }
 
 .action-data {
@@ -136,10 +214,25 @@
     border: none;
     cursor: pointer;
     border-radius: 5px;
+
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.edit-btn,.delete-btn  {
+    background-color: #5979e1;
+    color: white;
+    padding: 5px 10px;
+    
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+
 }
 
 .delete-btn {
     background-color: #240877;
+
 }
 
 .edit-btn:hover {
@@ -196,4 +289,13 @@
 
 .update-btn:hover {
     background-color: #4a6bd4;
+
+
+}
+.edit-btn:hover{
+    background-color:#5979e1;
+}
+
+.delete-btn:hover{
+    background-color: #240877;
 }
