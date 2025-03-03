@@ -1,7 +1,7 @@
 import express from "express";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import db from "../database.js"; 
+import db from "../database.js";
 
 const router = express.Router();
 
@@ -22,7 +22,7 @@ router.post("/signup", async (req, res) => {
                 return res.status(500).json({ error: "Database error" });
             }
 
-            // const token = jwt.sign({ email }, "your_secret_key", { expiresIn: "1h" });
+
 
             res.status(201).json({ message: "User registered successfully" });
         });

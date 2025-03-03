@@ -18,6 +18,8 @@ const Donor = () => {
         number: "",
     });
 
+    const bloodGroups = ["A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"];
+
     useEffect(() => {
         fetchDonors();
     }, []);
@@ -157,7 +159,12 @@ const Donor = () => {
                             <option value="Female">Female</option>
                             <option value="Other">Other</option>
                         </select>
-                        <input type="text" name="blood" placeholder="Blood Type" value={formData.blood} onChange={handleChange} required />
+                        <select name="blood" value={formData.blood} onChange={handleChange} required>
+                            <option value="">Select Blood Type</option>
+                            {bloodGroups.map((group) => (
+                                <option key={group} value={group}>{group}</option>
+                            ))}
+                        </select>
                         <textarea name="address" placeholder="Address" value={formData.address} onChange={handleChange} required />
                         <input type="email" name="mail" placeholder="Email" value={formData.mail} onChange={handleChange} required />
                         <input type="text" name="number" placeholder="Phone Number" value={formData.number} onChange={handleChange} required />
