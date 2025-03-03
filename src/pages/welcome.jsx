@@ -37,8 +37,8 @@ const Welcome = () => {
             </aside>
             <div className="main-content">
                 <div className="top-bar">
-                    <h2>Welcome Administrator</h2>
-                    <button className="logout-btn">Logout</button>
+                    <h2>Welcome to Home Page</h2>
+                    <button className="logout-btn">Administrator</button>
                 </div>
                 <div className="blood-stock">
                     {bloodData.map((blood) => (
@@ -62,3 +62,26 @@ const Welcome = () => {
 };
 
 export default Welcome;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
