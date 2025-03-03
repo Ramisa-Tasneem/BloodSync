@@ -48,5 +48,12 @@ CREATE TABLE Vaccination (
     hospital_name VARCHAR(255),
     FOREIGN KEY (donor_id) REFERENCES donor(donor_id) ON DELETE CASCADE
 );
+CREATE TABLE handedover_request (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    request_id INT NOT NULL,
+    picked_up_by VARCHAR(255) NOT NULL,
+    date_created DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (request_id) REFERENCES BloodRequest(request_id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
