@@ -7,9 +7,7 @@ const router = express.Router();
 router.post("/add-bloodstock", (req, res) => {
     const { blood_group, volume, donated_date, expired_date } = req.body;
 
-    const { donor, blood_group, volume, donated_date, expired_date } = req.body;
-
-    const {donor, blood_group, volume, donated_date, expired_date } = req.body;
+   
 
 
     if (!donor || !blood_group || !volume || !donated_date || !expired_date) {
@@ -20,12 +18,7 @@ router.post("/add-bloodstock", (req, res) => {
     const sql = "INSERT INTO BloodStock (blood_group, volume, donated_date, expired_date) VALUES (?, ?, ?, ?)";
     const values = [blood_group, volume, donated_date, expired_date];
 
-    const sql = "INSERT INTO BloodStock (donor, blood_group, volume, donated_date, expired_date) VALUES (?, ?, ?, ?, ?)";
-    const values = [donor, blood_group, volume, donated_date, expired_date];
-
-    const sql = "INSERT INTO BloodStock (donor, blood_group, volume, donated_date, expired_date) VALUES (?, ?, ?, ?, ?)";
-    const values = [donor,blood_group, volume, donated_date, expired_date];
-
+   
 
     db.query(sql, values, (err, result) => {
         if (err) {
@@ -60,7 +53,7 @@ router.delete("/bloodStock", (req, res) => {
     const sql = "DELETE FROM BloodStock WHERE blood_id = ?";
 
 
-    db.query(sql, [blood_id], (err, results) => {
+    
 
     db.query(sql, [blood_id], (err, results) => {  // ✅ Pass `blood_id` as an array
 

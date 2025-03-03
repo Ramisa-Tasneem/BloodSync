@@ -82,7 +82,7 @@
 .save-btn,
 .cancel-btn {
     padding: 12px 18px;
-
+}
 .form-container input{
     margin: 20px;
     padding: 20px;
@@ -185,7 +185,7 @@
     background-color: #626d99;
     color: white;
     text-align: left;
-
+}
 .table-container th, .table-container td {
     border: 1px solid #ddd;
     padding: 8px;
