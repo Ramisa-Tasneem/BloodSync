@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/welcome.css";
+import Navbar from "./Navbar";
 
 const Welcome = () => {
     const bloodData = [
@@ -22,7 +23,11 @@ const Welcome = () => {
     ];
 
     return (
+
+            <div>
+                <Navbar/>
         <div className="flex h-screen">
+
             <aside className="sidebar">
                 <h2>BloodSync</h2>
                 <nav>
@@ -31,6 +36,7 @@ const Welcome = () => {
                         <li><Link to="/donor">Donor</Link></li>
                         <li><Link to="/bloodstock">Blood Stock</Link></li>
                         <li><Link to="/donations">Blood Request</Link></li>
+                        <li><Link to="/Donor-Health-History">Donor Health History</Link></li>
 
                     </ul>
                 </nav>
@@ -57,6 +63,7 @@ const Welcome = () => {
                     ))}
                 </div>
             </div>
+                    </div>
         </div>
     );
 };

@@ -5,7 +5,7 @@ const router = express.Router();
 
 
 router.post("/add-bloodstock", (req, res) => {
-    const { blood_group, volume, donated_date, expired_date } = req.body;
+    const { donor,blood_group, volume, donated_date, expired_date } = req.body;
 
    
 
@@ -15,8 +15,8 @@ router.post("/add-bloodstock", (req, res) => {
     }
 
 
-    const sql = "INSERT INTO BloodStock (blood_group, volume, donated_date, expired_date) VALUES (?, ?, ?, ?)";
-    const values = [blood_group, volume, donated_date, expired_date];
+    const sql = "INSERT INTO BloodStock (donor,blood_group, volume, donated_date, expired_date) VALUES (?, ?, ?, ?, ?)";
+    const values = [donor,blood_group, volume, donated_date, expired_date];
 
    
 
@@ -26,6 +26,25 @@ router.post("/add-bloodstock", (req, res) => {
             return res.status(500).json({ error: "Database error", details: err.sqlMessage });
         }
         res.status(201).json({ message: "Blood stock added successfully" });
+    });
+});
+
+router.put("/update", (req, res) => {
+    const { blood_id, donor, blood_group, volume, donated_date, expired_date } = req.body;
+
+    if (!blood_id || !donor || !blood_group || !volume || !donated_date || !expired_date) {
+        return res.status(400).json({ error: "All fields are required" });
+    }
+
+    const sql = "UPDATE BloodStock SET donor = ?, blood_group = ?, volume = ?, donated_date = ?, expired_date = ? WHERE blood_id = ?";
+    const values = [donor, blood_group, volume, donated_date, expired_date, blood_id];
+
+    db.query(sql, values, (err, result) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).json({ error: "Database error" });
+        }
+        res.status(200).json({ message: "Record updated successfully" });
     });
 });
 
@@ -53,7 +72,7 @@ router.delete("/bloodStock", (req, res) => {
     const sql = "DELETE FROM BloodStock WHERE blood_id = ?";
 
 
-    
+ 
 
     db.query(sql, [blood_id], (err, results) => {  // ✅ Pass `blood_id` as an array
 

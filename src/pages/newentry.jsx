@@ -17,6 +17,7 @@ const NewEntry = () => {
             const response=await axios.post("http://localhost:8000/bloodstock/add-bloodstock",newEntry)
             if(response.status===201){
                 console.log(response.data.message)
+                navigate('/bloodstock')
             }
         } catch (error) {
             console.log(error)
@@ -27,7 +28,7 @@ const NewEntry = () => {
         <div className="form-container">
             <h3>Add New Entry</h3>
             <input type="text" name="donor" placeholder="Donor Name" value={newEntry.donor} onChange={handleNewEntryChange} />
-            <input type="date" name="donated_date" value={newEntry.donated_date} onChange={handleNewEntryChange} />
+            <input type="date" name="donated_date" label="abcd" value={newEntry.donated_date} onChange={handleNewEntryChange} />
             <input type="date" name="expired_date" value={newEntry.expired_date} onChange={handleNewEntryChange} />
             <select name ="blood_group"  value={newEntry.blood_group} onChange={handleNewEntryChange}>
                 <option value="">Select Blood Group</option>
