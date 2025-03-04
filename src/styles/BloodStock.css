@@ -1,0 +1,301 @@
+.blood-stock-container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1.9px solid #060505;
+    padding: 6px;
+    border-radius: 8px;
+    width: 98%;
+}
+
+.search-icon {
+    color: #110505;
+}
+
+.search-bar {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 8px;
+
+}
+
+.new-entry-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #5979e1;
+    color: rgb(252, 252, 252);
+    border: none;
+    cursor: pointer;
+
+    border-radius: 5px;
+}
+
+.new-entry-btn:hover {
+    background-color: #4a6bd4;
+
+}
+.new-entry-btn:hover{
+    background-color: #5979e1;
+
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.form-container input,
+.form-container select {
+    margin: 10px;
+    padding: 12px;
+    width: 85%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+    outline: none;
+    appearance: none;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+    border-color: #5979e1;
+    box-shadow: 0 0 5px rgba(89, 121, 225, 0.5);
+}
+
+.save-btn,
+.cancel-btn {
+    padding: 12px 18px;
+}
+.form-container input{
+    margin: 20px;
+    padding: 20px;
+    width: 83%; /* Ensure consistency with the select element */
+    border: 1px solid #ccc; /* Match border */
+    border-radius: 5px; /* Smooth edges */
+    font-size: 16px; /* Match text size */
+    background-color: white; /* Ensure same background */
+    outline: none; /* Remove default outline */
+    appearance: none; /* Remove default input styling */
+}
+.form-container select {
+    margin: 20px;
+    padding: 20px;
+    width: 86%; /* Ensure consistency with the select element */
+    border: 1px solid #ccc; /* Match border */
+    border-radius: 5px; /* Smooth edges */
+    font-size: 16px; /* Match text size */
+    background-color: white; /* Ensure same background */
+    outline: none; /* Remove default outline */
+    appearance: none; /* Remove default input styling */
+}
+
+/* Add some styling to make it more visually appealing */
+.form-container input:focus,
+.form-container select:focus {
+    border-color: #5979e1; /* Highlight color on focus */
+    box-shadow: 0 0 5px rgba(89, 121, 225, 0.5);
+}
+
+.save-btn, .cancel-btn {
+    padding: 15px 20px;
+
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+
+    width: 40%;
+}
+
+.save-btn {
+    background-color: #5979e1;
+    color: white;
+}
+
+.save-btn:hover {
+    background-color: #4a6bd4;
+}
+
+.cancel-btn {
+    background-color: #240877;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background-color: #1d0666;
+
+}
+
+.save-btn {
+    width: 20%;
+    background-color:#5979e1;
+    color: white;
+    border-radius: 15px;
+}
+.save-btn:hover{
+    background-color:#5979e1;
+    color: white;
+}
+
+.cancel-btn {
+    width:20%;
+    background-color: #240877;
+    color: rgb(240, 230, 230);
+    border-radius:15px;
+}
+.cancel-btn:hover{
+    background-color: #240877;
+
+}
+
+.table-container {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1.7px solid #060505;
+}
+
+
+.table-container th,
+.table-container td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.table-container th {
+    background-color: #626d99;
+    color: white;
+    text-align: left;
+}
+.table-container th, .table-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+.table-container th {
+    background-color: #626d99; /* Choose your preferred color */
+    color: white; /* Text color for contrast */
+    padding: 10px; /* Add some padding for better spacing */
+    text-align: left; /* Align text to the left */
+
+}
+
+.action-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edit-btn,
+.delete-btn {
+    background-color: #5979e1;
+    color: white;
+    padding: 6px 12px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.edit-btn,.delete-btn  {
+    background-color: #5979e1;
+    color: white;
+    padding: 5px 10px;
+    min-width: 80px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.delete-btn {
+    background-color: #240877;
+
+}
+
+.edit-btn:hover {
+    background-color: #4a6bd4;
+}
+
+.delete-btn:hover {
+    background-color: #1d0666;
+}
+
+/* Edit Form Styling */
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.edit-form h3 {
+    margin-bottom: 15px;
+}
+
+.edit-form input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.edit-form input:focus {
+    border-color: #5979e1;
+    box-shadow: 0 0 5px rgba(89, 121, 225, 0.5);
+}
+
+.update-btn {
+    background-color: #5979e1;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 40%;
+    margin-top: 10px;
+}
+
+.update-btn:hover {
+    background-color: #4a6bd4;
+
+
+}
+.edit-btn:hover{
+    background-color:#5979e1;
+}
+
+.delete-btn:hover{
+    background-color: #240877;
+}

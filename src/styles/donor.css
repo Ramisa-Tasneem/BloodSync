@@ -1,0 +1,132 @@
+/* Search Box */
+.search-box {
+    width: 50%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Donor List */
+.donor-list {
+    width: 90%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow-x: auto;
+}
+
+.donor-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #ffcccc;
+    color: black;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #fff4f4;
+}
+
+/* Edit & Delete Buttons */
+.edit-btn,
+.delete-btn {
+    padding: 8px 12px;
+    margin: 2px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.edit-btn {
+    background-color: #fbc02d;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #f9a825;
+    transform: scale(1.05);
+}
+
+.delete-btn {
+    background-color: #e53935;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c62828;
+    transform: scale(1.05);
+}
+
+/* Donor Form Styling */
+.donor-form-box {
+    width: 40%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.donor-form-box h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.donor-form-box input,
+.donor-form-box select,
+.donor-form-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.donor-form-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.donor-form-box button:hover {
+    background-color: #218838;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .donor-form-box {
+        width: 90%;
+    }
+
+    .search-box {
+        width: 80%;
+    }
+
+    .donor-list {
+        width: 100%;
+    }
+}

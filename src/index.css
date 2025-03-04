@@ -1,68 +1,149 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
+/* ====== GLOBAL STYLES ====== */
 body {
+  background-color: white !important;
+  font-family: Arial, sans-serif;
   margin: 0;
+  padding: 0;
+}
+
+/* ====== COMMON CONTAINER STYLES FOR LOGIN & REGISTER ====== */
+.auth-container {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 50px;
+  padding: 20px;
+  background-color: white;
+  flex-direction: row;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* ====== REGISTER PAGE STYLES ====== */
+.register-image {
+  position: absolute;
+  top: 200px;
+  /* Align image properly */
+  left: 20px;
+  /* Ensure image stays on the left */
+  width: 800px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.register-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ====== LOGIN PAGE STYLES ====== */
+.auth-image {
+  position: absolute;
+  top: 200px;
+  /* Align image properly */
+  left: 20px;
+  /* Ensure image stays on the left */
+  width: 800px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.auth-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ====== FLOATING ANIMATION FOR IMAGES ====== */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ====== COMMON FORM STYLES FOR LOGIN & REGISTER ====== */
+.auth-form {
+  position: absolute;
+  top: 160px;
+  /* Adjust this value to move the form container downwards */
+  right: 180px;
+  width: 400px;
+  height: auto;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  border-bottom: 2px solid #d9243f;
+  display: inline-block;
+  padding-bottom: 5px;
+  width: 100%;
+}
+
+.auth-form label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background: #b30f32;
+  color: white;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  font-size: 16px;
+  transition: background 0.3s;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.auth-form button:hover {
+  background: #831717;
+}
+
+.auth-form p {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: black;
+}
+
+.auth-form a {
+  color: #d7394e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-form a:hover {
+  text-decoration: underline;
 }
