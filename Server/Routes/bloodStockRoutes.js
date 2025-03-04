@@ -29,6 +29,11 @@ router.post("/add-bloodstock", (req, res) => {
     });
 });
 
+const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return date.toISOString().slice(0, 19).replace("T", " ");
+};
+
 router.put("/update", (req, res) => {
     const { blood_id, donor, blood_group, volume, donated_date, expired_date } = req.body;
 
@@ -36,17 +41,22 @@ router.put("/update", (req, res) => {
         return res.status(400).json({ error: "All fields are required" });
     }
 
+    // Convert dates before inserting into MySQL
+    const formattedDonatedDate = formatDate(donated_date);
+    const formattedExpiredDate = formatDate(expired_date);
+
     const sql = "UPDATE BloodStock SET donor = ?, blood_group = ?, volume = ?, donated_date = ?, expired_date = ? WHERE blood_id = ?";
-    const values = [donor, blood_group, volume, donated_date, expired_date, blood_id];
+    const values = [donor, blood_group, volume, formattedDonatedDate, formattedExpiredDate, blood_id];
 
     db.query(sql, values, (err, result) => {
         if (err) {
             console.error(err);
-            return res.status(500).json({ error: "Database error" });
+            return res.status(500).json({ error: "Database error", err });
         }
         res.status(200).json({ message: "Record updated successfully" });
     });
 });
+
 
 
 router.get("/all", (req, res) => {

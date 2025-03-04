@@ -115,7 +115,7 @@ const BloodStock = () => {
                         <tr key={row.blood_id}>
                             <td>{row.blood_id}</td>
                             {editRowId === row.blood_id ? (
-                                <>
+                                    <>
                                     <td>
                                         <input 
                                             type="text" 
@@ -141,12 +141,21 @@ const BloodStock = () => {
                                         />
                                     </td>
                                     <td>
-                                        <input 
-                                            type="text" 
+                                        <select 
                                             name="blood_group" 
                                             value={editFormData.blood_group} 
-                                            onChange={handleEditChange} 
-                                        />
+                                            onChange={handleEditChange}
+                                        >
+                                            <option value="">Select Blood Group</option>
+                                            <option value="A+">A+</option>
+                                            <option value="A-">A-</option>
+                                            <option value="B+">B+</option>
+                                            <option value="B-">B-</option>
+                                            <option value="O+">O+</option>
+                                            <option value="O-">O-</option>
+                                            <option value="AB+">AB+</option>
+                                            <option value="AB-">AB-</option>
+                                        </select>
                                     </td>
                                     <td>
                                         <input 

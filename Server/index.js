@@ -8,6 +8,7 @@ import bloodStockRoutes from "./Routes/bloodStockRoutes.js";
 import BloodRequestRouter from "./Routes/BloodRequestRouter.js";
 import vaccinationRoutes from "./Routes/vaccinationRoutes.js";
 import HandoverRouter from "./Routes/HandoverRouter.js";
+import InventoryRouter from "./Routes/INventoryROute.js";
 
 
 
@@ -18,6 +19,7 @@ app.use(cookieParser());
 
 app.use('/api', AuthRouter);
 app.use('/api/donors', DonorRouter);
+app.use('/api', InventoryRouter);
 app.use("/bloodstock", bloodStockRoutes);
 app.use("/bloodrequest", BloodRequestRouter);
 app.use("/vaccination", vaccinationRoutes);
